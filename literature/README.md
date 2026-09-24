@@ -59,18 +59,28 @@ Already represented in part:
 - Last & Penrose — Poisson process foundations.
 - stochastic-geometry references on Palm/Poisson methods.
 
-### C. Must add / verify for the manifold paper
+### C. Manifold / intrinsic-dimension literature status
 
-Before claiming novelty, obtain and read the closest sources on:
+Added and normalized:
 
-- **Penrose & Yukich — limit theory for point processes in manifolds.**
-- **Brito, Quiroz & Yukich — graph-based intrinsic-dimension estimation.**
-- **Levina & Bickel — maximum-likelihood intrinsic-dimension estimation from local Poisson/nearest-neighbor behavior.**
-- **Dyballa & Zucker — IAN / Gabriel neighborhoods for manifold learning.**
-- **Niyogi, Smale & Weinberger — manifold sampling / reach / topological inference.**
-- **Aamari & Levrard — tangent-space, manifold, and curvature estimation.**
+- `Farahmand_2007_Manifold-Adaptive-Dimension-Estimation.pdf`
+- `Kim-Rinaldo-Wasserman_2019_Minimax-Rates-Manifold-Dimension.pdf`
+- `Aamari-Levrard_2019_Manifold-Tangent-Curvature-Estimation.pdf`
+- `Giesen-Wagner_2004_Shape-Dimension-Intrinsic-Metric-Manifolds.pdf`
+- `Facco_2017_TwoNN-Intrinsic-Dimension.pdf`
+- `Costa-Girotra-Hero_2005_Local-Intrinsic-Dimension-kNN-Graphs.pdf`
 
-Years/filenames should be verified from the actual paper before adding them.
+Still missing from the core reading set:
+
+- **Penrose & Yukich (2013)** — *Limit theory for point processes in manifolds*.
+- **Brito, Quiroz & Yukich (2013)** — *Intrinsic dimension identification via graph-theoretic methods*.
+- **Brito, Quiroz & Yukich (2002)** — *Graph-Theoretic Procedures for Dimension Identification*.
+- **Levina & Bickel (2004)** — *Maximum Likelihood Estimation of Intrinsic Dimension*.
+- **Costa & Hero (2004)** — *Geodesic Entropic Graphs for Dimension and Entropy Estimation in Manifold Learning*.
+- **Dyballa & Zucker (2023)** — *IAN: Iterated Adaptive Neighborhoods for Manifold Learning and Dimensionality Estimation*.
+- **Niyogi, Smale & Weinberger (2008)** — *Finding the Homology of Submanifolds with High Confidence from Random Samples*.
+
+These seven should be obtained before the novelty matrix is considered complete.
 
 ## Literature-review extraction template
 
