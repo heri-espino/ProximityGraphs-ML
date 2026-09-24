@@ -2,20 +2,20 @@
 
 **Last updated:** 2026-09-23  
 **Project:** Paper 1 — proximity graphs on manifolds  
-**Repository:** `heri-espino/ProximityGraphs-ML`
+**Repository:** \`heri-espino/ProximityGraphs-ML\`
 
 ## What this project is
 
 This repository is for a new theoretical/statistical paper extending fixed-template empty-region proximity-graph ideas from Euclidean stochastic geometry to data sampled from a smooth manifold.
 
-The user's prior work develops a **unit-region factorization** viewpoint for empty-region graphs: for similarity-copy exclusion regions, a dimension/template-dependent unit-volume constant (a_{d,T}) controls Poisson void probabilities and several local graph statistics in flat Euclidean space.
+The user's prior work develops a **unit-region factorization** viewpoint for empty-region graphs: for similarity-copy exclusion regions, a dimension/template-dependent unit-volume constant \(a_{d,T}\) controls Poisson void probabilities and several local graph statistics in flat Euclidean space.
 
 The current project asks whether the correct local replacement on a manifold is obtained by:
 
-1. zooming into (x\in\mathcal M);
-2. replacing the manifold by its tangent space (T_xmathcal M\cong\mathbb R^m);
-3. replacing the local binomial sample by a homogeneous Poisson process of intensity (f(x));
-4. replacing ambient dimension (D) by intrinsic dimension (m);
+1. zooming into \(x\in\mathcal M\);
+2. replacing the manifold by its tangent space \(T_x\mathcal M\cong\mathbb R^m\);
+3. replacing the local binomial sample by a homogeneous Poisson process of intensity \(f(x)\);
+4. replacing ambient dimension \(D\) by intrinsic dimension \(m\);
 5. transferring degree and edge-length laws into intrinsic-dimension inference.
 
 This is the central research program, **not an established result yet**.
@@ -40,32 +40,32 @@ Paper 1 should **not** expand into persistent homology, Čech/Rips, topological 
 
 ## Intellectual starting point
 
-For a candidate pair at local distance (r), the Euclidean fixed-template intuition is
-[
+For a candidate pair at local distance \(r\), the Euclidean fixed-template intuition is
+\[
 \mathrm{Vol}_m(S_T)=a_{m,T}r^m.
-]
+\]
 
 On a smooth manifold, the first target is
-[
+\[
 \mathrm{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
 =
 a_{m,T}r^m+o(r^m).
-]
+\]
 
-With local sample intensity (nf(x)), the corresponding candidate edge-void probability should then behave like
-[
+With local sample intensity \(nf(x)\), the corresponding candidate edge-void probability should then behave like
+\[
 \exp[-nf(x)a_{m,T}r^m].
-]
+\]
 
-At the local scale (r=t n^{-1/m}), this suggests
-[
+At the local scale \(r=t n^{-1/m}\), this suggests
+\[
 P(x\sim y)\to \exp[-f(x)a_{m,T}t^m].
-]
+\]
 
 The major conceptual point is:
-[
+\[
 D \text{ (ambient dimension) } \quad\leadsto\quad m \text{ (intrinsic tangent-space dimension).}
-]
+\]
 
 Do **not** treat the displayed manifold formulas as proved merely because they are plausible.
 
@@ -84,24 +84,24 @@ Known/nearby strands include:
 - nearest-neighbor Poisson models for intrinsic dimension (e.g. Levina–Bickel);
 - use of Gabriel graphs in manifold-learning neighborhoods (IAN).
 
-In particular, **(E[D_{GG}]\approx 2^m) by itself is not a novelty claim**. The intended contribution is the unified manifold/tangent-space ERG theory and the statistical inference derived from it.
+In particular, **\(E[D_{GG}]\approx 2^m\) by itself is not a novelty claim**. The intended contribution is the unified manifold/tangent-space ERG theory and the statistical inference derived from it.
 
 Before writing the introduction, create a novelty matrix that makes this distinction explicit.
 
 ## Literature status
 
-The repository currently contains a broad literature dump in `literature/pdf/`. Filenames have been normalized.
+The repository currently contains a broad literature dump in \`literature/pdf/\`. Filenames have been normalized.
 
 Two PDFs could not be identified reliably from repository-accessible metadata:
 
-- `Unknown_nd_Unidentified-Scanned-Article.pdf`
-- `Unknown_nd_Unidentified-PDF.pdf`
+- \`Unknown_nd_Unidentified-Scanned-Article.pdf\`
+- \`Unknown_nd_Unidentified-PDF.pdf\`
 
 Do not guess their citation metadata. Identify them manually when possible.
 
 The folder also contains clearly tangential/unrelated material. It was intentionally retained during the rename pass. Curate later, after the novelty audit.
 
-Core sources still likely need to be added, especially the manifold point-process limit paper, the graph-based intrinsic-dimension paper, IAN, and standard manifold-estimation references. See `literature/README.md`.
+Core sources still likely need to be added, especially the manifold point-process limit paper, the graph-based intrinsic-dimension paper, IAN, and standard manifold-estimation references. See \`literature/README.md\`.
 
 ## What has been done
 
@@ -138,7 +138,7 @@ Recommended order:
 6. IAN: record exactly what it uses/claims about Gabriel neighborhoods and dimension.
 7. Manifold geometry references for reach, tangent approximation, and curvature error.
 
-Then create `docs/NOVELTY_MATRIX.md` and only afterward freeze the main theorem statement.
+Then create \`docs/NOVELTY_MATRIX.md\` and only afterward freeze the main theorem statement.
 
 ## Conventions for future agents
 
@@ -146,7 +146,7 @@ Then create `docs/NOVELTY_MATRIX.md` and only afterward freeze the main theorem 
 - Do not call all proximity graphs “single-template” unless the precise class is defined.
 - Prefer the established umbrella term **empty-region graph (ERG)** when discussing prior literature; use the fixed-template/similarity-copy terminology for the narrower structural subclass being studied.
 - Do not conflate candidate-pair edge probability with the distribution of a randomly selected retained edge.
-- Keep intrinsic dimension (m) distinct from ambient dimension (D).
+- Keep intrinsic dimension \(m\) distinct from ambient dimension \(D\).
 - Keep boundary-free exact-manifold sampling as the main theorem setting initially; boundary and noise belong in robustness experiments unless scope changes.
 - Reuse prior submitted results rather than duplicating them as if new.
-- Heavy derived-output GitHub Actions, if introduced later, must be manual-only via `workflow_dispatch`; lightweight CI may remain automatic.
+- Heavy derived-output GitHub Actions, if introduced later, must be manual-only via \`workflow_dispatch\`; lightweight CI may remain automatic.
