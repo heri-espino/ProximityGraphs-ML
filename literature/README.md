@@ -20,6 +20,13 @@ For two-author works, both surnames may be retained when useful. For larger auth
 
 Do not encode journal names, DOI strings, download-site tokens, or phrases such as `Download (1)` into filenames.
 
+
+## Curation status
+
+On 2026-09-23, the corpus was pruned to remove material clearly unrelated to Paper 1. Removed items included time-series smoothing/forecasting papers, *Attention Is All You Need*, an English-language exam trainer, unrelated education-support literature, a Mexican-city power-law paper, a nonspatial Weibull-network paper, and a Poisson-approximation paper on amenable groups.
+
+Peripheral sources with a plausible role in proximity graphs, stochastic geometry, nearest-neighbor computation, geometric probability, manifold statistics, or supporting mathematics were retained pending the novelty audit.
+
 ## Unresolved PDFs
 
 Two source files could not be identified reliably from accessible metadata during the normalization pass:
