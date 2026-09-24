@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-09-23  
 **Project:** Paper 1 — proximity graphs on manifolds  
-**Repository:** \`heri-espino/ProximityGraphs-ML\`
+**Repository:** `heri-espino/ProximityGraphs-ML`
 
 ## What this project is
 
@@ -90,18 +90,18 @@ Before writing the introduction, create a novelty matrix that makes this distinc
 
 ## Literature status
 
-The repository currently contains a broad literature dump in \`literature/pdf/\`. Filenames have been normalized.
+The repository currently contains a broad literature dump in `literature/pdf/`. Filenames have been normalized.
 
 Two PDFs could not be identified reliably from repository-accessible metadata:
 
-- \`Unknown_nd_Unidentified-Scanned-Article.pdf\`
-- \`Unknown_nd_Unidentified-PDF.pdf\`
+- `Unknown_nd_Unidentified-Scanned-Article.pdf`
+- `Unknown_nd_Unidentified-PDF.pdf`
 
 Do not guess their citation metadata. Identify them manually when possible.
 
 The folder also contains clearly tangential/unrelated material. It was intentionally retained during the rename pass. Curate later, after the novelty audit.
 
-Core sources still likely need to be added, especially the manifold point-process limit paper, the graph-based intrinsic-dimension paper, IAN, and standard manifold-estimation references. See \`literature/README.md\`.
+Core sources still likely need to be added, especially the manifold point-process limit paper, the graph-based intrinsic-dimension paper, IAN, and standard manifold-estimation references. See `literature/README.md`.
 
 ## What has been done
 
@@ -138,7 +138,7 @@ Recommended order:
 6. IAN: record exactly what it uses/claims about Gabriel neighborhoods and dimension.
 7. Manifold geometry references for reach, tangent approximation, and curvature error.
 
-Then create \`docs/NOVELTY_MATRIX.md\` and only afterward freeze the main theorem statement.
+Then create `docs/NOVELTY_MATRIX.md` and only afterward freeze the main theorem statement.
 
 ## Conventions for future agents
 
@@ -149,4 +149,4 @@ Then create \`docs/NOVELTY_MATRIX.md\` and only afterward freeze the main theore
 - Keep intrinsic dimension \(m\) distinct from ambient dimension \(D\).
 - Keep boundary-free exact-manifold sampling as the main theorem setting initially; boundary and noise belong in robustness experiments unless scope changes.
 - Reuse prior submitted results rather than duplicating them as if new.
-- Heavy derived-output GitHub Actions, if introduced later, must be manual-only via \`workflow_dispatch\`; lightweight CI may remain automatic.
+- Heavy derived-output GitHub Actions, if introduced later, must be manual-only via `workflow_dispatch`; lightweight CI may remain automatic.
