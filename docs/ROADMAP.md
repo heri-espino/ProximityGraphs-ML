@@ -1,254 +1,373 @@
-# Research Roadmap — Empty-Region Proximity Graphs on Manifolds
+# Research Roadmap — Curvature Corrections for Empty-Region Proximity Graphs
 
-## 1. Research objective
+## 1. Revised research objective
 
 Let
+
 \[
 \mathcal M^m\subset\mathbb R^D
 \]
-be an unknown smooth \(m\)-dimensional manifold and let
+
+be a smooth embedded manifold and let
+
 \[
-X_1,\ldots,X_n\stackrel{iid}{\sim} f\,d\mathrm{vol}_{\mathcal M}.
+X_1,\ldots,X_n\stackrel{iid}{\sim}f\,d\operatorname{vol}_{\mathcal M}.
 \]
 
-For a fixed-template empty-region rule \(T\), an edge \(x_i x_j\) is retained when its associated region \(S_T(x_i,x_j)\) contains no other sample point.
+For an ambient fixed-template empty-region rule \(T\), the edge \(x_i x_j\) is retained when its exclusion region \(S_T(x_i,x_j)\) contains no other sample point.
 
-The working thesis is that, at the \(n^{-1/m}\) spatial scale, the graph near a point \(x\in\mathcal M\) should be governed by a homogeneous Poisson process on the tangent space \(T_x\mathcal M\simeq\mathbb R^m\). If true under a useful template class, the same unit-region constant that controls the Euclidean graph should control local manifold degree and edge-length laws after replacing ambient dimension by intrinsic dimension.
+The earlier Euclidean unit-region theory gives the flat-space factorization
 
-This is a research hypothesis until proved.
+\[
+\operatorname{Vol}_d(S_T(x,y))=a_{d,T}\|x-y\|^d.
+\]
 
-## 2. Why the paper exists
+The new paper should not simply replace \(d\) by intrinsic dimension \(m\). The first-order tangent-space identity
 
-Several ingredients already exist separately:
+\[
+\operatorname{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+=
+a_{m,T}r^m+o(r^m)
+\]
 
-1. Euclidean empty-region/proximity-graph theory gives exact or asymptotic graph-size and degree results.
-2. Stabilizing geometric probability provides LLNs/CLTs for local graph functionals.
-3. Point-process limit theory on manifolds reduces many local statistics to Poisson processes on tangent spaces.
-4. Graph statistics and nearest-neighbor distances are already used for intrinsic-dimension estimation.
-5. Gabriel graphs have already appeared in manifold-learning algorithms.
+is now considered the **baseline**.
 
-Therefore the paper must **not** claim that proximity graphs, Gabriel graphs, or graph-based dimension inference are new.
+The main goal is to characterize the departure from flatness:
 
-The potential contribution is their synthesis into one explicit fixed-template ERG theory on manifolds:
+\[
+\boxed{
+\operatorname{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+-
+a_{m,T}r^m.
+}
+\]
+
+We want to understand whether this deviation is controlled by the second fundamental form \(II_x\), edge direction \(u\), codimension, tangent orientation, local density derivatives, and template geometry.
+
+The motivating interpretation is
+
+\[
+\boxed{
+\text{flat ERG law}
++
+\text{geometric perturbation}
+=
+\text{observable signature of manifold geometry}.
+}
+\]
+
+## 2. Relation to the previous Unit-Region paper
+
+The previous paper has the chain
+
 \[
 T
 \longrightarrow
-a_{m,T}
+a_{d,T}
 \longrightarrow
-\text{tangent-space Poisson ERG}
+\text{Poisson void law}
 \longrightarrow
-(D,R)
-\longrightarrow
-m.
+\text{degree / incidence-length laws}.
 \]
 
-## 3. Core definitions to settle
+Paper 1 here should instead be organized as
 
-### Sampling model
-
-Initial theorem setting:
-
-- compact \(C^2\) manifold \(\mathcal M^m\subset\mathbb R^D\);
-- no boundary;
-- positive reach \(\tau>0\);
-- density \(f\) continuous or Lipschitz;
-- \(0<f_{\min}\le f(x)\le f_{\max}<\infty\).
-
-These assumptions should be weakened only when a proof gives a clear reason.
-
-### Template class
-
-The admissible template \(T\) should support a similarity-copy representation of the candidate exclusion region, schematically
 \[
-S_T(x,y)=x+rR_u T
+\boxed{
+\text{flat unit-region law}
+\longrightarrow
+\text{tangent restriction}
+\longrightarrow
+\text{curvature/orientation correction}
+\longrightarrow
+\text{perturbed ERG statistics}.
+}
 \]
-after fixing a normalized endpoint configuration, with \(r=\|x-y\|\) and orientation \(u\).
 
-Candidate assumptions:
+Therefore \(a_{m,T}r^m\) is a null model / first-order term. The main contribution is the first informative correction beyond that null model. Intrinsic-dimension inference is secondary. Merely recovering \(2^m\) for Gabriel is not a paper contribution.
 
-- Borel measurability;
-- translation equivariance;
-- rotation equivariance or a controlled orientation rule;
-- homogeneous scaling;
-- finite positive \(m\)-volume;
-- endpoint symmetry when the graph is undirected;
-- boundary regularity sufficient for manifold-volume approximation;
-- locality/stabilization sufficient for geometric-probability limit theory.
+## 3. Core geometric problem
 
-The exact minimal class is a research deliverable, not a naming exercise.
+### 3.1 Ambient template and tangent section
 
-## 4. Theorem chain
+The exclusion region is constructed in ambient space:
 
-### Target A — local manifold-volume lemma
-
-For \(y\to x\) with \(r=\|x-y\|\),
 \[
-\mathrm{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+S_T(x,y)\subset\mathbb R^D.
+\]
+
+At small scales, the relevant flat object is the section induced on the tangent plane:
+
+\[
+S_T(x,y)\cap T_x\mathcal M.
+\]
+
+Define a tangent-section coefficient
+
+\[
+a_T(T_x\mathcal M,u)
 =
+\operatorname{vol}_m(
+\text{normalized ambient template section in direction }u
+).
+\]
+
+A major structural question is:
+
+> For which ambient template classes is
+> \[
+> a_T(T_x\mathcal M,u)=a_{m,T}
+> \]
+> independent of tangent orientation and edge direction?
+
+This suggests studying a class of templates stable under tangent restriction. Terminology should be frozen only after comparison with existing literature.
+
+### 3.2 First-order theorem
+
+Establish
+
+\[
+\operatorname{vol}_{\mathcal M}
+(S_T(x,y)\cap\mathcal M)
+=
+a_T(T_x\mathcal M,u)r^m+o(r^m).
+\]
+
+For isotropic / tangent-stable templates this should reduce to
+
+\[
 a_{m,T}r^m+o(r^m).
 \]
 
-Optional second-order target:
+This theorem is necessary but not sufficient for the paper.
+
+### 3.3 First non-flat correction
+
+The principal target is an expansion
+
 \[
-\mathrm{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+\boxed{
+\operatorname{vol}_{\mathcal M}
+(S_T(x,y)\cap\mathcal M)
 =
-a_{m,T}r^m+b_T(x,u)r^{m+2}+o(r^{m+2}),
-\]
-where \(b_T\) may encode the second fundamental form / curvature.
-
-### Target B — tangent-space graph limit
-
-After rescaling by \(n^{1/m}\) around \(x\), the local ERG should converge to the corresponding ERG of a homogeneous Poisson process of intensity \(f(x)\) on \(T_x\mathcal M\).
-
-Symbolically,
-\[
-G_T(X_n)\stackrel{\mathrm{loc}}{\Longrightarrow}
-G_T(\mathcal P_{f(x)}\subset T_x\mathcal M).
+a_T(T_x\mathcal M,u)r^m
++
+b_T(x,u)r^{m+q}
++
+o(r^{m+q})
+}
 \]
 
-### Target C — scaled edge law
+where \(q\) must be derived.
 
-At \(r_n=t n^{-1/m}\),
+If general templates produce an \(r^{m+1}\) term, characterize when symmetry cancels it. If symmetry forces \(q=2\), identify \(b_T(x,u)\) in terms of \(II_x\), \(u\), and template moments.
+
+This is the theorem that would most clearly separate the paper from the earlier Euclidean framework.
+
+## 4. Probability consequences
+
+Once the geometric expansion is known,
+
 \[
-P(x\sim y)
-\to
-\exp[-f(x)a_{m,T}t^m]
-\]
-under the precise conditioning used by the theorem.
-
-The paper must be exact about the difference between candidate-pair edge probability and the distribution of a randomly selected retained edge.
-
-### Target D — degree law
-
-At minimum,
-\[
-E[D_n(x)]\to c_{m,T}.
-\]
-
-For an isotropic similarity-copy template, investigate when
-\[
-c_{m,T}=\frac{\kappa_m}{a_{m,T}},
-\qquad
-\kappa_m=\frac{\pi^{m/2}}{\Gamma(m/2+1)}.
+P(x\sim y\mid x,y)
+\approx
+\exp\left[
+-nf(x)\operatorname{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+\right].
 \]
 
-For the Gabriel template this reduces to the known Euclidean constant \(2^m\); the new contribution must be the manifold-limit framework and subsequent inference, not that identity.
+Hence
 
-### Target E — graph-size LLN
-
-Seek
 \[
-\frac{|E_n|}{n}\to\frac{c_{m,T}}2
-\]
-in probability or almost surely under the chosen assumptions.
-
-### Target F — intrinsic-dimension consistency
-
-Construct at least one estimator \(\widehat m_n\) from ERG observables and prove
-\[
-\widehat m_n\xrightarrow{P}m.
+\log P(x\sim y\mid x,y)
+=
+-nf(x)a_T(T_x\mathcal M,u)r^m
+-
+nf(x)b_T(x,u)r^{m+q}
++\cdots.
 \]
 
-Asymptotic normality is desirable but not required for the minimal paper.
+The goal is not merely to recover the tangent Poisson limit. Penrose–Yukich already supplies general tangent-space local limit machinery. We need the **explicit correction around that limit**.
 
-## 5. Statistical routes
+## 5. Statistical / geometric consequences
 
-### Degree route
+### 5.1 Flat quantities as calibration
 
-If \(m\mapsto c_{m,T}\) is injective,
+Use flat first-order quantities only as calibration:
+
 \[
-\widehat m_{\deg}=c_T^{-1}(\bar D).
+E[D\mid x]\approx c_{m,T},
 \]
 
-Gabriel provides the motivating special case
+and incident-edge scale approximately
+
 \[
-\widehat m\approx\log_2 \bar D.
+[nf(x)a_{m,T}]^{-1/m}
 \]
 
-This identity has prior literature; our task is to determine a rigorous estimator, finite-sample behavior, and whether other templates offer better bias/variance tradeoffs.
+for tangent-stable templates.
 
-### Edge-length route
+### 5.2 Curvature-sensitive residuals
 
-The Euclidean fixed-template theory suggests a Weibull-type scaling. On a manifold the candidate local law is
+Investigate residual statistics such as
+
 \[
-nf(x)a_{m,T}R^m
+\Delta_{\deg}(x)
+=
+E[D_n(x)]-c_{m,T},
+\]
+
+and transformed edge-length or void-probability residuals after subtracting the flat null.
+
+Ask whether
+
+\[
+\Delta_{\deg}(x),\qquad
+\Delta_R(x,u),\qquad
+\Delta_{\text{void}}(x,u)
+\]
+
+encode contractions of \(II_x\), directional curvature, or reach.
+
+### 5.3 Potential inverse problem
+
+A stronger endpoint is
+
+\[
+\boxed{
+\text{ERG local observables}
 \Rightarrow
-\operatorname{Exp}(1),
+(m,\ f(x),\ \text{curvature information}).
+}
 \]
-for a carefully defined local edge-length variable \(R\).
 
-Possible estimators:
+Conceptually:
 
-- survival-slope / Weibull-plot estimator;
-- moment-ratio estimator;
-- likelihood estimator using local edge lengths;
-- joint degree-length estimator separating \(m\) from \(f(x)\).
-
-Every formula must be tied to the exact random-edge sampling scheme.
-
-## 6. Simulation program
-
-### Geometries
-
-Use manifolds with known intrinsic dimension and controlled geometry:
-
-- circles and spheres;
-- flat / embedded tori;
-- Swiss roll as a standard nontrivial embedding;
-- higher-dimensional spheres;
-- optionally products of spheres for richer curvature patterns.
-
-### Factors
-
-Vary:
-
-- intrinsic dimension \(m\);
-- ambient dimension \(D\);
-- sample size \(n\);
-- sampling density \(f\);
-- reach / curvature;
-- template \(T\).
-
-### Main diagnostic figures
-
-1. Local manifold-to-tangent-space schematic.
-2. Theory vs empirical mean degree across \(m\) and templates.
-3. Normalized edge-length data collapse.
-4. Density invariance of degree vs density dependence of lengths.
-5. Intrinsic-dimension RMSE vs \(n\).
-6. Template bias/variance comparison.
-7. Robustness to curvature, boundary, and small off-manifold noise.
-
-### Signature data-collapse test
-
-The most important empirical falsification test is whether
 \[
-Z=nf(x)a_{m,T}R^m
+\text{leading exponent}\to m,
 \]
-collapses toward \(\operatorname{Exp}(1)\) across different \(n\), \(m\), densities, and templates after using the correct edge notion.
 
-If this fails systematically, revisit the theoretical object before adding more experiments.
+\[
+\text{leading scale}\to f(x),
+\]
 
-## 7. Minimum publishable theorem package
+\[
+\text{second-order / directional residual}\to\text{local curvature}.
+\]
 
-The paper is not ready merely because simulations look good. A minimal coherent package is:
+This is a target, not a current theorem.
 
-1. local tangent-space ERG limit;
-2. local edge-probability / edge-length consequence;
-3. degree expectation or distributional limit;
-4. global edge-count LLN;
-5. consistency of at least one intrinsic-dimension estimator.
+## 6. Role of existing manifold limit theory
 
-A CLT, curvature correction, local-density estimator, or nonasymptotic error bound would strengthen the paper but is not required at the outset.
+Penrose–Yukich (2013) is enabling machinery. It already supplies
 
-## 8. Follow-up papers, not Paper 1
+\[
+\text{local manifold score}
+\to
+\text{homogeneous Poisson score on }T_x\mathcal M.
+\]
 
-### Possible Paper 2 — topology
+We should not re-prove or claim novelty for that principle.
 
-Use ERG/RNG/Gabriel structure to reduce or calibrate topological constructions, persistent-homology birth scales, or topological reconstruction.
+Our contribution should be:
 
-### Possible Paper 3 — manifold operators
+1. ERG-specific ambient-template geometry;
+2. explicit tangent-section constants;
+3. first non-flat departure from tangent geometry;
+4. consequences for observable graph statistics.
 
-Introduce order-\(k_n\) empty-region graphs with \(k_n\to\infty\) and \(k_n/n\to0\), then study graph-Laplacian convergence toward a differential operator such as the Laplace–Beltrami operator.
+If the final result is only "Penrose–Yukich applies to Gabriel/RNG," the project is too incremental.
 
-Do not let these directions dilute Paper 1 before its local stochastic theory is complete.
+## 7. Revised theorem stack
+
+### Theorem A — tangent-section theorem
+
+For an admissible ambient template \(T\),
+
+\[
+\operatorname{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+=
+a_T(T_x\mathcal M,u)r^m+o(r^m).
+\]
+
+Characterize when
+
+\[
+a_T(T_x\mathcal M,u)=a_{m,T}.
+\]
+
+### Theorem B — curvature correction
+
+Derive the first nonzero correction:
+
+\[
+a_T(T_x\mathcal M,u)r^m
++
+b_T(x,u)r^{m+q}
++
+o(r^{m+q}),
+\]
+
+with \(q\) determined by symmetry. Express \(b_T\) geometrically.
+
+### Corollary C — perturbed void law
+
+Translate Theorem B into a second-order asymptotic for edge probability.
+
+### Corollary D — perturbed degree / edge-length statistics
+
+Determine how curvature changes local expected degree, incident-edge radial intensity, moments / quantiles, and directional edge statistics.
+
+### Theorem E — identifiability or estimation
+
+If feasible, prove that one or more curvature quantities can be recovered from suitably normalized ERG observables.
+
+This is preferable to making intrinsic dimension the headline estimator.
+
+## 8. Simulation program
+
+Use manifolds with analytically known geometry:
+
+- flat manifolds as null controls;
+- circles and spheres with varying radius;
+- cylinders;
+- tori with locations of different principal curvatures;
+- paraboloids / quadratic patches;
+- saddle surfaces.
+
+Vary intrinsic dimension \(m\), ambient dimension \(D\), curvature magnitude/sign, direction relative to principal directions, template \(T\), density \(f\), and sample size \(n\).
+
+Signature experiments should measure
+
+\[
+\frac{
+\operatorname{vol}_{\mathcal M}(S_T\cap\mathcal M)-a_{m,T}r^m
+}{
+r^{m+q}
+}
+\]
+
+against the predicted correction coefficient, then propagate the same correction into edge probability, degree bias, and edge-length residuals.
+
+## 9. Minimum publishable package
+
+The revised minimum is:
+
+1. a nontrivial tangent-section theorem;
+2. a first non-flat correction with geometric interpretation;
+3. at least one explicit consequence for ERG probabilities/statistics;
+4. simulations validating that correction across controlled manifolds/templates.
+
+A paper that contains only the first-order tangent limit plus intrinsic-dimension estimation is no longer considered sufficient.
+
+## 10. Out of scope
+
+Still out of scope:
+
+- persistent homology;
+- Čech / Vietoris–Rips;
+- topological reconstruction;
+- graph-Laplacian / Laplace–Beltrami convergence;
+- spectral manifold learning;
+- UMAP/Isomap replacement;
+- order-\(k_n\) continuum operators.
