@@ -1,6 +1,6 @@
 # AI Handoff — ProximityGraphs-ML
 
-**Last updated:** 2026-09-23  
+**Last updated:** 2026-09-24  
 **Project:** Paper 1 — proximity graphs on manifolds  
 **Repository:** `heri-espino/ProximityGraphs-ML`
 
@@ -114,8 +114,8 @@ Core sources still likely need to be added, especially the manifold point-proces
 
 ## What has NOT been done
 
-- No exhaustive literature review.
-- No novelty matrix.
+- No final submission-level exhaustive prior-art review; a first-pass core-literature novelty audit is complete.
+- `docs/NOVELTY_MATRIX.md` now records the overlap/gap analysis.
 - No formal template definition for this paper.
 - No proof of the manifold-volume lemma.
 - No proof of a tangent-space graph limit.
@@ -126,7 +126,7 @@ Core sources still likely need to be added, especially the manifold point-proces
 
 ## Immediate next task
 
-**Do the literature audit before proving new theorems.**
+**Use the completed first-pass novelty matrix to formalize the template class and attack the manifold-volume lemma.**
 
 Recommended order:
 
@@ -138,7 +138,7 @@ Recommended order:
 6. IAN: record exactly what it uses/claims about Gabriel neighborhoods and dimension.
 7. Manifold geometry references for reach, tangent approximation, and curvature error.
 
-Then create `docs/NOVELTY_MATRIX.md` and only afterward freeze the main theorem statement.
+The first-pass `docs/NOVELTY_MATRIX.md` is now complete. Its main conclusion is that generic graph-based intrinsic-dimension estimation and tangent-Poisson limits are prior art; Paper 1 should be centered on the fixed-template manifold exclusion-volume factorization and explicit ERG laws. Do not freeze the estimator until that theorem is proved.
 
 ## Conventions for future agents
 

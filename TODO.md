@@ -14,8 +14,8 @@ This is the operational checklist for the current paper. Items are ordered by de
 - [ ] Read Penrose–Yukich's manifold limit theory and identify the exact theorem/hypotheses reusable here.
 - [ ] Read the graph-based intrinsic-dimension literature, especially Brito–Quiroz–Yukich and Levina–Bickel.
 - [ ] Read IAN (Dyballa–Zucker) carefully for what is already claimed/used about Gabriel degree and dimension.
-- [ ] Build `docs/NOVELTY_MATRIX.md`: rows = closest papers, columns = ERG class / manifold support / tangent Poisson limit / degree law / edge-length law / dimension estimator / CLT / applications.
-- [ ] Write a one-paragraph defensible novelty statement only after the matrix is complete.
+- [x] Build `docs/NOVELTY_MATRIX.md`: map the closest papers against ERG class, manifold support, tangent-Poisson limits, degree/length laws, dimension inference, and asymptotic theory.
+- [x] Write a provisional defensible novelty statement after the first-pass matrix; re-check priority before submission.
 
 ## P1 — Formal model
 
