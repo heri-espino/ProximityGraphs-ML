@@ -8,7 +8,7 @@ This is the operational checklist for the current paper. Items are ordered by de
 - [x] Document the paper scope and theorem targets.
 - [ ] Identify the two unresolved PDFs currently named with `Unknown_nd_...`.
 - [x] Remove literature clearly unrelated to Paper 1; retain mathematically plausible peripheral sources until the novelty audit.
-- [ ] Acquire the core missing manifold/intrinsic-dimension papers listed in `literature/README.md`.
+- [x] Acquire and normalize the core manifold/intrinsic-dimension papers listed in `literature/README.md`.
 - [ ] Read Devroye (1988) completely and extract assumptions, theorem statements, proof machinery, and constants.
 - [ ] Read Cardinal et al. (2009) and map their empty-region-graph formalism against our fixed-template class.
 - [ ] Read Penrose–Yukich's manifold limit theory and identify the exact theorem/hypotheses reusable here.

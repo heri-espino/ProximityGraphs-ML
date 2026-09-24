@@ -61,8 +61,15 @@ Already represented in part:
 
 ### C. Manifold / intrinsic-dimension literature status
 
-Added and normalized:
+The core manifold / intrinsic-dimension set is now present and normalized:
 
+- `Penrose-Yukich_2013_Limit-Theory-Point-Processes-Manifolds.pdf`
+- `Brito-Quiroz-Yukich_2013_Intrinsic-Dimension-Graph-Theoretic-Methods.pdf`
+- `Brito-Quiroz-Yukich_2002_Graph-Theoretic-Dimension-Identification.pdf`
+- `Levina-Bickel_2004_Maximum-Likelihood-Intrinsic-Dimension.pdf`
+- `Costa-Hero_2004_Geodesic-Entropic-Graphs-Manifold-Dimension.pdf`
+- `Dyballa-Zucker_2023_IAN-Manifold-Learning-Dimension.pdf`
+- `Niyogi-Smale-Weinberger_2008_Homology-Submanifolds-Random-Samples.pdf`
 - `Farahmand_2007_Manifold-Adaptive-Dimension-Estimation.pdf`
 - `Kim-Rinaldo-Wasserman_2019_Minimax-Rates-Manifold-Dimension.pdf`
 - `Aamari-Levrard_2019_Manifold-Tangent-Curvature-Estimation.pdf`
@@ -70,17 +77,7 @@ Added and normalized:
 - `Facco_2017_TwoNN-Intrinsic-Dimension.pdf`
 - `Costa-Girotra-Hero_2005_Local-Intrinsic-Dimension-kNN-Graphs.pdf`
 
-Still missing from the core reading set:
-
-- **Penrose & Yukich (2013)** — *Limit theory for point processes in manifolds*.
-- **Brito, Quiroz & Yukich (2013)** — *Intrinsic dimension identification via graph-theoretic methods*.
-- **Brito, Quiroz & Yukich (2002)** — *Graph-Theoretic Procedures for Dimension Identification*.
-- **Levina & Bickel (2004)** — *Maximum Likelihood Estimation of Intrinsic Dimension*.
-- **Costa & Hero (2004)** — *Geodesic Entropic Graphs for Dimension and Entropy Estimation in Manifold Learning*.
-- **Dyballa & Zucker (2023)** — *IAN: Iterated Adaptive Neighborhoods for Manifold Learning and Dimensionality Estimation*.
-- **Niyogi, Smale & Weinberger (2008)** — *Finding the Homology of Submanifolds with High Confidence from Random Samples*.
-
-These seven should be obtained before the novelty matrix is considered complete.
+At this point the main literature task is **reading and novelty mapping**, not acquiring the previously identified core papers.
 
 ## Literature-review extraction template
 
