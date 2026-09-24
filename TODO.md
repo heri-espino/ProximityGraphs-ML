@@ -7,7 +7,7 @@ This is the operational checklist for the current paper. Items are ordered by de
 - [x] Normalize literature filenames.
 - [x] Document the paper scope and theorem targets.
 - [ ] Identify the two unresolved PDFs currently named with `Unknown_nd_...`.
-- [ ] Remove or move literature that is clearly unrelated only after a deliberate curation pass; do not delete sources merely because they look tangential.
+- [x] Remove literature clearly unrelated to Paper 1; retain mathematically plausible peripheral sources until the novelty audit.
 - [ ] Acquire the core missing manifold/intrinsic-dimension papers listed in `literature/README.md`.
 - [ ] Read Devroye (1988) completely and extract assumptions, theorem statements, proof machinery, and constants.
 - [ ] Read Cardinal et al. (2009) and map their empty-region-graph formalism against our fixed-template class.
