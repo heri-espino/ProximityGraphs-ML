@@ -1,152 +1,202 @@
 # AI Handoff — ProximityGraphs-ML
 
 **Last updated:** 2026-09-24  
-**Project:** Paper 1 — proximity graphs on manifolds  
-**Repository:** `heri-espino/ProximityGraphs-ML`
+**Project:** Paper 1 — differential-geometric corrections to empty-region proximity graphs  
+**Repository:** heri-espino/ProximityGraphs-ML
 
-## What this project is
+## Critical framing change
 
-This repository is for a new theoretical/statistical paper extending fixed-template empty-region proximity-graph ideas from Euclidean stochastic geometry to data sampled from a smooth manifold.
+Do **not** continue the old framing "extend Unit-Region Factorization from \(d\) to intrinsic dimension \(m\) and build an intrinsic-dimension estimator."
 
-The user's prior work develops a **unit-region factorization** viewpoint for empty-region graphs: for similarity-copy exclusion regions, a dimension/template-dependent unit-volume constant \(a_{d,T}\) controls Poisson void probabilities and several local graph statistics in flat Euclidean space.
+That is now considered too close to the user's previous paper:
 
-The current project asks whether the correct local replacement on a manifold is obtained by:
+Espino_2026_Unit-Region-Factorization-Empty-Region-Graphs.pdf
 
-1. zooming into \(x\in\mathcal M\);
-2. replacing the manifold by its tangent space \(T_x\mathcal M\cong\mathbb R^m\);
-3. replacing the local binomial sample by a homogeneous Poisson process of intensity \(f(x)\);
-4. replacing ambient dimension \(D\) by intrinsic dimension \(m\);
-5. transferring degree and edge-length laws into intrinsic-dimension inference.
+The earlier paper already has the flat-space chain
 
-This is the central research program, **not an established result yet**.
-
-## Current paper boundary
-
-Working title:
-
-> **Empty-Region Proximity Graphs on Manifolds: Local Limits and Intrinsic Dimension**
-
-Paper 1 should contain:
-
-- a precise admissible template class;
-- local manifold-volume asymptotics;
-- tangent-space Poisson / local graph limits;
-- degree and edge-length consequences;
-- at least one consistent intrinsic-dimension estimator;
-- simulations on controlled manifolds;
-- comparisons to established intrinsic-dimension estimators.
-
-Paper 1 should **not** expand into persistent homology, Čech/Rips, topological reconstruction, graph Laplacians, Laplace–Beltrami convergence, spectral embeddings, or a new manifold-learning algorithm unless the scope is explicitly changed later.
-
-## Intellectual starting point
-
-For a candidate pair at local distance \(r\), the Euclidean fixed-template intuition is
 \[
-\mathrm{Vol}_m(S_T)=a_{m,T}r^m.
+T
+\to
+a_{d,T}
+\to
+\text{Poisson void law}
+\to
+\text{degree / incident-edge laws}.
 \]
 
-On a smooth manifold, the first target is
+A new paper whose main result is only
+
 \[
-\mathrm{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+d\rightsquigarrow m
+\]
+
+via tangent-space Poisson limits would be too incremental, especially because Penrose–Yukich already provides general tangent-space limit theory for local manifold functionals.
+
+## Revised paper question
+
+The project now asks:
+
+\[
+\boxed{
+\text{How does differential geometry perturb the flat unit-region laws?}
+}
+\]
+
+For a manifold
+
+\[
+\mathcal M^m\subset\mathbb R^D
+\]
+
+and ambient exclusion region \(S_T(x,y)\), the first-order tangent approximation
+
+\[
+\operatorname{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
 =
-a_{m,T}r^m+o(r^m).
+a_{m,T}r^m+o(r^m)
 \]
 
-With local sample intensity \(nf(x)\), the corresponding candidate edge-void probability should then behave like
+is a **baseline lemma**, not the intended headline result.
+
+The main target is a first non-flat expansion
+
 \[
-\exp[-nf(x)a_{m,T}r^m].
+\operatorname{vol}_{\mathcal M}(S_T(x,y)\cap\mathcal M)
+=
+a_T(T_x\mathcal M,u)r^m
++
+b_T(x,u)r^{m+q}
++
+o(r^{m+q}),
 \]
 
-At the local scale \(r=t n^{-1/m}\), this suggests
+where the correction order \(q\) must be derived rather than assumed.
+
+The coefficient should encode local geometry through objects such as the second fundamental form \(II_x\), edge direction \(u\), tangent orientation, codimension, and template geometry.
+
+## Key structural question
+
+The exclusion region is constructed in ambient space, so the leading object is a tangent section:
+
 \[
-P(x\sim y)\to \exp[-f(x)a_{m,T}t^m].
+S_T(x,y)\cap T_x\mathcal M.
 \]
 
-The major conceptual point is:
+Do not assume automatically that its normalized \(m\)-volume is the same universal \(a_{m,T}\).
+
+Define / investigate
+
 \[
-D \text{ (ambient dimension) } \quad\leadsto\quad m \text{ (intrinsic tangent-space dimension).}
+a_T(T_x\mathcal M,u)
 \]
 
-Do **not** treat the displayed manifold formulas as proved merely because they are plausible.
+and characterize templates for which
 
-## Closest existing literature / novelty risks
+\[
+a_T(T_x\mathcal M,u)=a_{m,T}
+\]
 
-The novelty claim must be conservative.
+independently of orientation and direction.
 
-Known/nearby strands include:
+This tangent-stability question may itself be an important structural contribution.
 
-- classical Gabriel and RNG theory;
-- Devroye-style expected-size laws for geometric/empty-region graphs in Euclidean space;
-- Cardinal et al.'s empty-region graph formalism;
-- stabilization, weak laws, and CLTs for geometric graph functionals (Penrose/Yukich and related work);
-- point-process limit theory for samples on manifolds;
-- graph-based intrinsic-dimension estimation;
-- nearest-neighbor Poisson models for intrinsic dimension (e.g. Levina–Bickel);
-- use of Gabriel graphs in manifold-learning neighborhoods (IAN).
+## Role of intrinsic dimension
 
-In particular, **\(E[D_{GG}]\approx 2^m\) by itself is not a novelty claim**. The intended contribution is the unified manifold/tangent-space ERG theory and the statistical inference derived from it.
+Intrinsic dimension is now secondary.
 
-Before writing the introduction, create a novelty matrix that makes this distinction explicit.
+Known literature already covers graph-theoretic intrinsic-dimension estimation, local Poisson nearest-neighbor estimators, graph edge-length estimators, Gabriel degree as a dimensionality signal, and tangent-space Poisson limits.
 
-## Literature status
+The new paper should use the flat \(m\)-dimensional laws as a null model and study deviations caused by curvature.
 
-The repository currently contains a broad literature dump in `literature/pdf/`. Filenames have been normalized.
+A stronger inverse-geometric target is
 
-Two PDFs could not be identified reliably from repository-accessible metadata:
+\[
+\text{leading exponent}\to m,\qquad
+\text{scale}\to f(x),\qquad
+\text{second-order residual}\to\text{curvature}.
+\]
 
-- `Unknown_nd_Unidentified-Scanned-Article.pdf`
-- `Unknown_nd_Unidentified-PDF.pdf`
+This is a research target, not a proved claim.
 
-Do not guess their citation metadata. Identify them manually when possible.
+## Current strongest candidate theorem
 
-The folder also contains clearly tangential/unrelated material. It was intentionally retained during the rename pass. Curate later, after the novelty audit.
+1. Tangent-section expansion:
+   \[
+   \operatorname{vol}_{\mathcal M}(S_T\cap\mathcal M)
+   =
+   a_T(T_x\mathcal M,u)r^m+o(r^m).
+   \]
 
-Core sources still likely need to be added, especially the manifold point-process limit paper, the graph-based intrinsic-dimension paper, IAN, and standard manifold-estimation references. See `literature/README.md`.
+2. First non-flat correction:
+   \[
+   =
+   a_T(T_x\mathcal M,u)r^m
+   +
+   b_T(x,u)r^{m+q}
+   +
+   o(r^{m+q}),
+   \]
+   with \(q\) determined by symmetry.
 
-## What has been done
+3. Translate \(b_T\) into perturbed edge probabilities and local graph statistics.
 
-- Paper 1 was separated conceptually from later topology/manifold-learning ideas.
-- The theorem chain and estimator ideas were sketched.
-- The simulation design was sketched.
-- The repository was initialized.
-- Literature files were renamed into a consistent convention.
-- Operational TODO and research roadmap were added.
+4. Investigate identifiability / estimation of curvature information from ERG residuals.
 
-## What has NOT been done
+## Immediate next work
 
-- No final submission-level exhaustive prior-art review; a first-pass core-literature novelty audit is complete.
-- `docs/NOVELTY_MATRIX.md` now records the overlap/gap analysis.
-- No formal template definition for this paper.
-- No proof of the manifold-volume lemma.
-- No proof of a tangent-space graph limit.
-- No validated edge-length law on manifolds.
-- No intrinsic-dimension estimator proof.
-- No simulation code.
+Do **geometry first**, statistics second.
+
+1. Formalize the ambient template construction.
+2. Work in a local chart / Monge patch:
+   \[
+   z\mapsto
+   x+z+\frac12 II_x(z,z)+O(\|z\|^3).
+   \]
+3. Intersect the scaled exclusion region with this graph.
+4. Expand the induced \(m\)-volume element and moving boundary.
+5. Determine whether the first correction is \(r^{m+1}\) or \(r^{m+2}\).
+6. Identify symmetry conditions that cancel odd terms.
+7. Compute the coefficient explicitly for Gabriel first.
+8. Then test RNG and stepping-stone templates.
+9. Only after that return to Penrose/Palm consequences.
+
+## What has been completed
+
+- Literature corpus assembled and normalized.
+- First-pass novelty matrix completed.
+- The overlap with the previous Unit-Region paper was explicitly recognized.
+- Project framing revised toward curvature/orientation corrections.
+- Core intrinsic-dimension literature is present.
+- Repo documentation treats tangent-Poisson and \(d\to m\) as background/baseline.
+
+## What is not done
+
+- No formal ambient-template class.
+- No tangent-section theorem.
+- No curvature expansion.
+- No proof of the order of the first correction.
+- No curvature-sensitive ERG statistic.
+- No simulation code for curvature experiments.
 - No paper draft.
 
-## Immediate next task
+## Referee test
 
-**Use the completed first-pass novelty matrix to formalize the template class and attack the manifold-volume lemma.**
+If the paper can still be summarized as
 
-Recommended order:
+> "Take the previous unit-region theory, replace \(d\) by \(m\), and invoke Penrose–Yukich,"
 
-1. Devroye (1988): extract the exact ERG-like hypotheses and expected-size derivation.
-2. Cardinal et al. (2009): map the formal ERG definition to the user's fixed-template class.
-3. Penrose–Yukich manifold limit theory: identify the reusable theorem and stabilization hypotheses.
-4. Brito–Quiroz–Yukich / related graph-based intrinsic-dimension theory.
-5. Levina–Bickel nearest-neighbor Poisson dimension estimation.
-6. IAN: record exactly what it uses/claims about Gabriel neighborhoods and dimension.
-7. Manifold geometry references for reach, tangent approximation, and curvature error.
+then the project is not ready.
 
-The first-pass `docs/NOVELTY_MATRIX.md` is now complete. Its main conclusion is that generic graph-based intrinsic-dimension estimation and tangent-Poisson limits are prior art; Paper 1 should be centered on the fixed-template manifold exclusion-volume factorization and explicit ERG laws. Do not freeze the estimator until that theorem is proved.
+The desired summary is instead:
+
+> "Use the flat unit-region theory as a null model and derive how embedded-manifold geometry changes empty-region volumes and proximity-graph statistics."
 
 ## Conventions for future agents
 
-- Distinguish **proved results**, **known literature results**, **conjectures**, and **simulation observations** in every document.
-- Do not call all proximity graphs “single-template” unless the precise class is defined.
-- Prefer the established umbrella term **empty-region graph (ERG)** when discussing prior literature; use the fixed-template/similarity-copy terminology for the narrower structural subclass being studied.
-- Do not conflate candidate-pair edge probability with the distribution of a randomly selected retained edge.
-- Keep intrinsic dimension \(m\) distinct from ambient dimension \(D\).
-- Keep boundary-free exact-manifold sampling as the main theorem setting initially; boundary and noise belong in robustness experiments unless scope changes.
-- Reuse prior submitted results rather than duplicating them as if new.
-- Heavy derived-output GitHub Actions, if introduced later, must be manual-only via `workflow_dispatch`; lightweight CI may remain automatic.
+- Never present \(a_{m,T}r^m+o(r^m)\) alone as the main novelty.
+- Never present Gabriel \(E[D]\approx2^m\) as new.
+- Use Penrose–Yukich as enabling machinery, not as a theorem to rediscover.
+- Separate inherited flat-space results from genuinely new manifold corrections.
+- Distinguish ambient dimension \(D\), intrinsic dimension \(m\), tangent orientation, and edge direction.
+- Check carefully whether an \(r^{m+1}\) term appears before assuming the correction is \(r^{m+2}\).
+- Treat curvature estimation as a target only after the expansion is mathematically established.
