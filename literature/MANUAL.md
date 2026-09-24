@@ -29,7 +29,8 @@
 | Graph-theoretic dimension estimators | Brito-Quiroz-Yukich_2002_Graph-Theoretic-Dimension-Identification.pdf; Brito-Quiroz-Yukich_2013_Intrinsic-Dimension-Graph-Theoretic-Methods.pdf | \(k\)-NN reach/common-neighbor/MST statistics; consistency and CLTs on manifolds |
 | Graph-length dimension estimation | Costa-Hero_2004_Geodesic-Entropic-Graphs-Manifold-Dimension.pdf | GMST/geodesic graph length scaling identifies intrinsic dimension and Rényi entropy |
 | Local dimension from \(k\)-NN graphs | Costa-Girotra-Hero_2005_Local-Intrinsic-Dimension-kNN-Graphs.pdf | Local intrinsic dimension on heterogeneous/manifold mixtures |
-| Gabriel neighborhoods on manifolds | Dyballa-Zucker_2023_IAN-Manifold-Learning-Dimension.pdf | Gabriel initialization, degree \(\approx2^d\), scale-free local neighborhoods |
+| Gabriel degree centering / density invariance | Devroye_1988_Expected-Size-Computational-Geometry-Graphs.pdf | Primary probabilistic source for the asymptotic \(2^d\) Gabriel mean-degree constant and its density robustness |
+| Gabriel neighborhoods on manifolds | Dyballa-Zucker_2023_IAN-Manifold-Learning-Dimension.pdf | Reuses/interprets Gabriel degree behavior in manifold-learning neighborhoods; not the primary source of the \(2^d\) density-invariance result |
 | Gabriel curvature-resolution observation | Dyballa-Zucker_2023_IAN-Manifold-Learning-Dimension.pdf | Explicit curvature threshold based on Gabriel geometry and sample spacing |
 | Tangent/curvature estimation rates | Aamari-Levrard_2019_Manifold-Tangent-Curvature-Estimation.pdf | Nonasymptotic/minimax results for tangent spaces and second fundamental form |
 | Reach/sampling assumptions | Niyogi-Smale-Weinberger_2008_Homology-Submanifolds-Random-Samples.pdf | Condition number/reach-style control, sampling complexity, noisy samples |
@@ -709,21 +710,67 @@ If dimension estimation reappears later, consistency alone is a weak statistical
 
 IAN begins with a Gabriel graph because it avoids a fixed global radius or fixed \(k\), and provides locally adaptive neighborhoods. It then iteratively sparsifies/reweights the graph to reconcile discrete and continuous local-volume estimates.
 
-## 8.2 Degree and local dimension
+## 8.2 Degree and local dimension: Devroye first, IAN later
 
-IAN reports that for simple/random manifold samples,
+The asymptotic Gabriel mean-degree constant and its robustness to the sampling density are **not an IAN result in origin**.
+
+Devroye (1988) is the primary probabilistic source. For broad classes of i.i.d. densities in \(\mathbb R^d\), the Gabriel expected edge count has leading term
+
+\[
+E|E_n|
+\sim
+2^{d-1}n,
+\]
+
+which yields the asymptotic mean degree
 
 \[
 \boxed{
-\deg(i)\approx2^{d_i},
+\frac{2E|E_n|}{n}
+\to
+2^d.
 }
 \]
 
-where \(d_i\) is local intrinsic dimension, and that the mean degree is largely insensitive to sampling density.
+The important point is that the leading constant is independent of the particular density \(f\) under the stated asymptotic conditions.
+
+IAN later **reuses and interprets** this Gabriel behavior in a manifold-learning setting, reporting local degree behavior approximately centered near
+
+\[
+2^{d_i}
+\]
+
+for local intrinsic dimension \(d_i\), and using this as a scale-free dimensionality signal.
+
+### Genealogy to cite
+
+\[
+\boxed{
+\text{Devroye (1988): probabilistic }2^d\text{ centering / density robustness}
+}
+\]
+
+\[
+\boxed{
+\text{IAN (2023): manifold-learning interpretation and algorithmic use}
+}
+\]
+
+Do not cite IAN as the primary source for the density-invariance or \(2^d\) asymptotic constant.
+
+### Technical caution
+
+Keep separate:
+
+- global expected mean degree;
+- conditional local degree \(E[D\mid X=x]\);
+- empirical finite-sample degree at a manifold point.
+
+The exact hypotheses for each statement must be checked in the source before the manuscript equates them.
 
 ### Implication
 
-Using \(m\approx\log_2\deg\) is not new.
+Using \(m\approx\log_2\deg\) is not new, and the density robustness of the leading Gabriel degree constant belongs historically to the Euclidean stochastic-geometry literature rather than to IAN.
 
 ## 8.3 Curvature-resolution result
 
