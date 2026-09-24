@@ -1,5 +1,10 @@
 # Literature
 
+## Start here
+
+Read **MANUAL.md** before opening individual PDFs. It is the working map of the important mathematical results, their source papers, and how they relate to the current research question.
+
+
 ## Filename convention
 
 PDFs should use:

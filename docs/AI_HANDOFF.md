@@ -142,6 +142,10 @@ This is a research target, not a proved claim.
 
 4. Investigate identifiability / estimation of curvature information from ERG residuals.
 
+## Literature manual
+
+**literature/MANUAL.md** is now the primary entry point to the literature corpus. It maps the important formulas/theorems to source PDFs and records what is reusable versus already occupied prior art. Read it before starting a proof, then open the cited original PDFs for exact hypotheses.
+
 ## Immediate next work
 
 Do **geometry first**, statistics second.
