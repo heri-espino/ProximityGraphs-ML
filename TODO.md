@@ -6,15 +6,15 @@ This is the operational checklist for the current paper. Items are ordered by de
 
 - [x] Normalize literature filenames.
 - [x] Document the paper scope and theorem targets.
-- [ ] Identify the two unresolved PDFs currently named with \`Unknown_nd_...\`.
+- [ ] Identify the two unresolved PDFs currently named with `Unknown_nd_...`.
 - [ ] Remove or move literature that is clearly unrelated only after a deliberate curation pass; do not delete sources merely because they look tangential.
-- [ ] Acquire the core missing manifold/intrinsic-dimension papers listed in \`literature/README.md\`.
+- [ ] Acquire the core missing manifold/intrinsic-dimension papers listed in `literature/README.md`.
 - [ ] Read Devroye (1988) completely and extract assumptions, theorem statements, proof machinery, and constants.
 - [ ] Read Cardinal et al. (2009) and map their empty-region-graph formalism against our fixed-template class.
 - [ ] Read Penrose–Yukich's manifold limit theory and identify the exact theorem/hypotheses reusable here.
 - [ ] Read the graph-based intrinsic-dimension literature, especially Brito–Quiroz–Yukich and Levina–Bickel.
 - [ ] Read IAN (Dyballa–Zucker) carefully for what is already claimed/used about Gabriel degree and dimension.
-- [ ] Build \`docs/NOVELTY_MATRIX.md\`: rows = closest papers, columns = ERG class / manifold support / tangent Poisson limit / degree law / edge-length law / dimension estimator / CLT / applications.
+- [ ] Build `docs/NOVELTY_MATRIX.md`: rows = closest papers, columns = ERG class / manifold support / tangent Poisson limit / degree law / edge-length law / dimension estimator / CLT / applications.
 - [ ] Write a one-paragraph defensible novelty statement only after the matrix is complete.
 
 ## P1 — Formal model
