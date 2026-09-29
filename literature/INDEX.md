@@ -936,3 +936,107 @@
   - 4. Evaluation of Travel Efficiency on Graphs 4.1 Model description
   - 4.2 Comparison with travel distance
   - 4.3 Comparison with the ratio to Euclidean distance
+
+### INTEGRAL INVARIANTS FROM COVARIANCE ANALYSIS OF EMBEDDED RIEMANNIAN MANIFOLDS
+
+- Markdown: `extracted/Alvarez-Vizoso-Kirby-Peterson_2018_Covariance-Integral-Invariants-Embedded-Manifold.md`
+- PDF: `pdf/Alvarez-Vizoso-Kirby-Peterson_2018_Covariance-Integral-Invariants-Embedded-Manifold.pdf`
+- Extraction: `hybrid`
+- Quality: `excellent` (100.0)
+- References: `references/Alvarez-Vizoso-Kirby-Peterson_2018_Covariance-Integral-Invariants-Embedded-Manifold.references.md`
+- Sections:
+  - Contents
+  - 1. Introduction
+  - 2. PCA Integral Invariants of Riemannian Submanifolds
+  - 3. Third Fundamental Form of a Riemannian Submanifold
+  - 4. Cylindrical Covariance Analysis
+  - 5. Spherical Covariance Analysis
+  - 6. Curvature Descriptors
+  - 7. Conclusions
+  - Appendix A. Integration of Monomials over Spheres
+
+### Linear Algebra and its Applications
+
+- Markdown: `extracted/Alvarez-Vizoso-Kirby-Peterson_2020_Manifold-Curvature-Integral-Invariant.md`
+- PDF: `pdf/Alvarez-Vizoso-Kirby-Peterson_2020_Manifold-Curvature-Integral-Invariant.pdf`
+- Extraction: `hybrid`
+- Quality: `good` (90.0)
+- References: `references/Alvarez-Vizoso-Kirby-Peterson_2020_Manifold-Curvature-Integral-Invariant.references.md`
+- Sections:
+  - Manifold curvature learning from hypersurface integral invariants
+  - a r t i c l e i n f o
+  - a b s t r a c t
+  - 1. Introduction
+  - 2. Integral invariants and descriptors
+  - 3. Example of the covariance-curvature correspondence
+  - 4. Hypersurface spherical component integral invariants
+  - 5. Hypersurface patch integral invariants
+  - 6. Multi-scale curvature descriptors
+
+### Abstract
+
+- Markdown: `extracted/Devillers-Erickson-Goaoc_2008_Empty-Ellipse-Graphs.md`
+- PDF: `pdf/Devillers-Erickson-Goaoc_2008_Empty-Ellipse-Graphs.pdf`
+- Extraction: `hybrid`
+- Quality: `good` (90.0)
+- References: `references/Devillers-Erickson-Goaoc_2008_Empty-Ellipse-Graphs.references.md`
+- Sections:
+  - 1 Introduction
+  - Empty-Ellipse Graphs
+  - Olivier Devillers ∗ Jeff Erickson †
+  - 2 Spread-Sensitive Bounds
+  - 2.1 Maximum Degree
+  - 3 Random Points
+  - 3.1 Upper Bound: Right Triangles
+  - 4 Delaunay Complexity of Random Points on the Cylinder
+  - A Characterization and Construction
+
+### Expected Size of the 3-Dimensional Delaunay Triangulation of Random Points on a Surface
+
+- Markdown: `extracted/Dumenil_2022_Delaunay-Random-Points-Surface.md`
+- PDF: `pdf/Dumenil_2022_Delaunay-Random-Points-Surface.pdf`
+- Extraction: `full-page-ocr`
+- Quality: `excellent` (96.0)
+- References: `references/Dumenil_2022_Delaunay-Random-Points-Surface.references.md`
+- Sections:
+  - THÈSE
+  - Résumé en francais
+  - Contents
+  - IV Expected size of the 3D-Delaunay triangulation of a Poisson point process distributed on a generic surface 161
+  - List of Figures
+  - Introduction
+  - Presentation of general notions, state of the art, and a first approach
+  - Chapter 1
+  - Geometry
+
+### Boundary-Moment Universality and Curvature Corrections in Random Geometric Graphs on Riemannian Manifolds
+
+- Markdown: `extracted/Hayashi-Nomoto-Suzuki_2026_Curvature-Corrections-Random-Geometric-Graphs.md`
+- PDF: `pdf/Hayashi-Nomoto-Suzuki_2026_Curvature-Corrections-Random-Geometric-Graphs.pdf`
+- Extraction: `hybrid`
+- Quality: `good` (90.0)
+- References: `references/Hayashi-Nomoto-Suzuki_2026_Curvature-Corrections-Random-Geometric-Graphs.references.md`
+- Sections:
+  - Abstract
+  - 1 Introduction
+  - 1.1 Relation to existing threshold and manifold expansions
+  - 1.2 Contributions and scope
+  - 2 Setting and notation
+  - 3 Main results
+  - 3.1 Path and triangle graph functionals
+  - 3.2 Statistical estimation from the path-triangle contrast
+  - 3.3 Degree-two threshold: k = 2
+
+### VOLUME OF A SMALL EXTRINSIC BALL IN A SUBMANIFOLD
+
+- Markdown: `extracted/Karp-Pinsky_1989_Small-Extrinsic-Ball-Submanifold.md`
+- PDF: `pdf/Karp-Pinsky_1989_Small-Extrinsic-Ball-Submanifold.pdf`
+- Extraction: `full-page-ocr`
+- Quality: `excellent` (98.0)
+- References: `references/Karp-Pinsky_1989_Small-Extrinsic-Ball-Submanifold.references.md`
+- Sections:
+  - LEON KARP AND MARK PINSKY
+  - ABSTRACT
+  - 1. Introduction
+  - 2. Statement and solution of problem
+  - 3. Consequences of the Theorem

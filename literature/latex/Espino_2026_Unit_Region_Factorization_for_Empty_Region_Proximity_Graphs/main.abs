@@ -1,0 +1,20 @@
+Many proximity graphs join two sites when a region determined by the pair contains no other site. We study finite empty-region rules for which the region associated with each pair is obtained from a fixed normalized Borel region by translation, rotation, and uniform scaling. If \(a_K\) denotes the volume of the unit region, then the corresponding pairwise region has volume \(a_K\ellpq^d\), where \(d\) is the dimension and \(\ellpq\) is the pair length. Thus, at the first-order stochastic level, the geometry of the rule enters through the single scalar \(a_K\).
+
+For a homogeneous Poisson process, this factorization yields the exact
+fixed-pair void probability and, for any Borel unit-region rule, the
+incident-edge length intensity, mean out-degree, and normalized
+incident-edge length law. For symmetric rules, the out-degree coincides
+with the ordinary degree. The normalized incident-edge length law is
+Weibull with shape parameter \(d\) and scale
+\((\rho a_K)^{-\nicefrac{1}{d}}\).
+Explicit formulas for the \(d\)-dimensional volume \(a_K\) are given
+for several proximity graphs, including the Gabriel graph, the relative-neighborhood graph,
+lune-based \(\beta\)-skeletons, and stepping--stone graphs. In the
+planar case, the framework also covers the circle-based
+\(\beta\)-skeleton through Veltkamp's diagonal parameterization,
+together with selected prescribed two-ball regions associated with
+Veltkamp's \(\gamma\)-neighborhood construction.
+
+
+
+

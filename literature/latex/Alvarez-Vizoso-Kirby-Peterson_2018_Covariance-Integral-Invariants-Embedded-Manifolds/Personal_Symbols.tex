@@ -1,0 +1,225 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  USED DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Logic usual commands
+\newcommand{\Lrar}{\Leftrightarrow}
+\renewcommand{\implies}{\Rightarrow}
+\newcommand{\such}{\, |\,}
+
+
+% No-italics math names
+\DeclareMathOperator{\Aut}{Aut}
+\newcommand{\id}{\mathrm{Id}}
+\newcommand{\tr}{\mathrm{tr}\,}
+
+% Predefined black-board letters
+%\newcommand{\C}{\mathbb{C}}
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\Q}{\mathbb{Q}}
+%\newcommand{\Z}{\mathbb{Z}}
+%\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\bbk}{\Bbbk}
+
+% Abbreviated math font styles
+\newcommand{\mr}[1]{\mathrm{#1}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
+\newcommand{\mbf}[1]{\mathbf{#1}}
+\newcommand{\mbb}[1]{\mathbb{#1}}
+\newcommand{\ms}[1]{\mathscr{#1}}
+\newcommand{\msf}[1]{\mathsf{#1}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\vecb}[1]{\vec{\bs{#1}}}
+
+% Predefined vectors and vector spaces
+\newcommand{\vze}{\vec{0}}
+\newcommand{\vx}{\vec{x}}
+\newcommand{\cx}{\bar{x}}
+\newcommand{\vy}{\vec{y}}
+\newcommand{\vz}{\vec{y}}
+\newcommand{\vu}{\vec{u}}
+\newcommand{\vv}{\vec{v}}
+\newcommand{\vw}{\vec{w}}
+\newcommand{\vphi}{\vec{phi}}
+\newcommand{\vF}{\vecb{F}}
+\newcommand{\vE}{\vecb{E}}
+\newcommand{\vV}{\vecb{V}}
+\newcommand{\vW}{\vecb{W}}
+
+\newcommand{\bze}{\bs{0}}
+\newcommand{\brr}{\bs{r}}
+\newcommand{\bb}{\bs{s}}
+\newcommand{\bx}{\bs{x}}
+\newcommand{\by}{\bs{y}}
+\newcommand{\bz}{\bs{z}}
+\newcommand{\bu}{\bs{u}}
+\newcommand{\bv}{\bs{v}}
+\newcommand{\bw}{\bs{w}}
+\newcommand{\bV}{\bs{V}}
+\newcommand{\bH}{\bs{H}}
+\newcommand{\VV}{\mbb{V}}
+
+\newcommand{\Gr}[2]{\mr{Gr}({#1},{#2})}
+\newcommand{\projj}[2]{\mr{proj}_{#2}({#1})}
+
+% Differencial geometry
+\newcommand{\bE}{\bs{e}}
+\newcommand{\bN}{\bs{n}}
+\newcommand{\bM}{\bs{m}}
+\newcommand{\bR}{\bs{R}}
+\newcommand{\Rie}[4]{\langle\bR({#1},{#2}){#3},\,{#4}\rangle}
+\newcommand{\Ric}[2]{\bs{\mc{R}ic}({#1},{#2})}
+\newcommand{\SH}{\bs{\hat{S}_H}}
+\newcommand{\oS}{\bs{\hat{S}}}
+\newcommand{\oR}{\bs{\hat{\mc{R}}}}
+\newcommand{\RW}[1]{\bs{\hat{W}}({#1})}
+\newcommand{\R}{\bs{\hat{\mc{R}}}}
+\newcommand{\cR}{\mc{R}}
+\newcommand{\met}{\bs{g}}
+\newcommand{\Ip}{\bs{\mr{I}}_p}
+\newcommand{\II}{\bs{\mr{II}}}
+\newcommand{\III}{\bs{\mr{III}}}
+\newcommand{\K}[2]{\bs{K}({#1}\wedge {#2})}
+\newcommand{\metric}[2]{\langle\, {#1},\,{#2}\,\rangle}
+\DeclareMathOperator{\hess}{Hess}
+
+\newcommand{\Cyll}{\mr{Cyl}_p}
+\newcommand{\Cy}{\hat{C}^\varepsilon}
+\newcommand{\Cyt}[1]{\hat{C}^\varepsilon (T_p{#1})}
+\newcommand{\Cyl}[2]{\hat{C}^\varepsilon ({#1},{#2})}
+
+% Predefined groups
+\newcommand{\gG}{\msf{G}}
+\newcommand{\gH}{\msf{H}}
+
+% Substituted commands
+\renewcommand{\tilde}{\widetilde}
+\renewcommand{\hat}{\widehat}
+\renewcommand{\bar}{\overline}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  OLD DEFINITIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%  Commands and operators
+\DeclareMathOperator{\End}{End}
+
+\def\normOrd#1{\mathop{:}\nolimits\!#1\!\mathop{:}\nolimits}
+\newcommand\cev[1]{\overset{\text{\tiny$\bm\leftarrow$}}{#1}}
+\newcommand\lra[1]{\overset{\text{\tiny$\bm\leftrightarrow$}}{#1}}
+
+
+\newcommand{\cor}{\boldsymbol{[}}
+\newcommand{\roc}{\boldsymbol{]}}
+\newcommand{\acor}{\boldsymbol{\{}}
+\newcommand{\aroc}{\boldsymbol{\}}}
+\newcommand{\dg}{\dagger}
+\newcommand{\dd}{\partial}
+\newcommand{\dc}{\nabla}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\del}{\delta}
+\newcommand{\Del}{\Delta}
+\newcommand{\al}{\alpha}
+\newcommand{\bet}{\beta}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\lbd}{\lambda}
+\newcommand{\La}{\Lambda}
+\newcommand{\si}{\sigma}
+\newcommand{\ka}{\kappa}
+\newcommand{\voS}{\boldsymbol{\hat{S}}}
+\newcommand{\voK}{\boldsymbol{\hat{K}}}
+\newcommand{\ovec}{\overrightarrow}
+
+\newcommand{\diag}{\mathrm{diag}}
+\def\RR{{\mathbb R}}
+\def\EE{{\mathbb E}}
+\def\CC{{\mathbb C}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\SS{{\mathbb S}}
+\def\cL{{\mathcal L}}
+\def\cH{{\mathcal H}}
+\def\cS{{\mathcal S}}
+\def\cT{{\mathcal T}}
+\def\cE{{\mathcal E}}
+\def\cD{{\mathcal D}}
+\def\cC{{\mathcal C}}
+\def\cO{{\mathcal O}}
+\def\cM{{\mathcal M}}
+\def\cA{{\mathcal A}}
+\def\cB{{\mathcal B}}
+\def\cP{{\mathcal P}}
+\def\cQ{{\mathcal Q}}
+\def\bD{{\mathbf D}}
+
+%%%%%%%%
+%Notations usuelles ensembles classiques
+
+%\newcommand{\1}{\mathbf{1}}
+
+%Les opérateurs
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Eext}{\mathit{Ext}}
+\DeclareMathOperator{\Def}{Def}
+\DeclareMathOperator{\Hom}{Hom}
+%\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Hhom}{\mathit{Hom}}
+\DeclareMathOperator{\Eend}{\mathit{End}}
+\DeclareMathOperator{\Mor}{\mathit{Mor}}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Aaut}{\mathit{Aut}}
+\DeclareMathOperator{\Iisom}{\mathit{Isom}}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Isomm}{\bf{Isom}}
+\DeclareMathOperator{\car}{char}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Br}{Br}
+\DeclareMathOperator{\val}{val}
+\DeclareMathOperator{\udeg}{\smash{\underline{\deg}}}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Sch}{Sch}
+\DeclareMathOperator{\SchS}{Sch_{S}}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Ri}{R}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Hi}{H}
+\newcommand{\Card}[1]{\mathrm{Card}\left(#1\right)} 
+
+%Notations article et raccourci polices
+
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\fB}{\mathfrak{B}}
+\newcommand{\rD}{\mathrm{D}}
+%\newcommand{\cD}{\mathcal{D}}%
+\newcommand{\rE}{\mathrm{E}}
+%\newcommand{\cE}{\mathcal{E}}
+\newcommand{\sE}{\mathscr{E}}%
+\newcommand{\sF}{\mathscr{F}}%
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\bG}{\mathbb{G}}%
+\newcommand{\fH}{\mathfrak{H}}
+%\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cHh}{\smash{\overline{\mathcal{H}}}}
+\newcommand{\fHh}{\smash{\overline{\mathfrak{H}}}}%
+\newcommand{\sL}{\mathscr{L}}%
+\newcommand{\fM}{\mathfrak{M}}
+\newcommand{\fMm}{\smash{\overline{\mathfrak{M}}}}%
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}%
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\fP}{\mathfrak{P}}%
+\newcommand{\fZ}{\mathfrak{Z}}%
+\newcommand{\vk}{\smash{\vec{\boldsymbol{k}}}}%

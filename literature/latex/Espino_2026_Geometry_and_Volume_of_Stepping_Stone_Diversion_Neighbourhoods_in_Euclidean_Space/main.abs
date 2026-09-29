@@ -1,0 +1,37 @@
+The stepping-stone graph forms a one-parameter family of empty-region graphs originally introduced in the plane.
+We develop a geometric, graph-theoretic, and % Agregue esta porque tambien creo que es importante hablar del SS graph
+probabilistic analysis of the stepping-stone graph in
+\(\R^d\), for every \(d\geq2\).
+ %
+The volume of the diversion neighborhood
+factorizes as the \(d\)th power of
+the distance between the defining sites times a
+normalized constant that depends only on $\alpha$,
+the stepping-stone parameter.
+% sisa >:D
+An explicit boundary parametrization reduces
+the original \(d\)-dimensional volume problem to a one-dimensional integral.
+We recover the degenerate case and the case corresponding to the region
+defining the Gabriel graph
+and prove, in every dimension,
+that, after removing the two defining sites, the finite-parameter
+neighborhoods converge from within to
+the open lune defining the relative-neighborhood
+graph. % para que quede igual que el de gg
+Consequently, their volumes converge to the classical % unit-lune % creo que es mejor decir que converge solo al volumen, por la prorposicion 1
+volume of the lune defining the
+relative-neighborhood graph, for which we record an equivalent regularized
+incomplete-beta representation. For arbitrary ambient dimension, we also
+prove strict region and volume monotonicity, derive the
+corresponding inclusions among classical proximity graphs, establish
+connectivity, and show that, for $\alpha\geq2$, the defining empty-region
+condition need only be evaluated for
+those edges in the Gabriel graph
+that are not in the open relative-neighborhood graph. %open-lune relative-neighborhood edges.
+The resulting volume constant specializes
+existing expected-size results for random proximity graphs. Finally, a
+ change of variables gives a stable quadrature formula,
+ which we validate independently
+by rejection sampling applied directly to the
+defining inequality.
+
